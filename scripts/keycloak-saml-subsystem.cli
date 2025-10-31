@@ -1,8 +1,8 @@
 /subsystem=keycloak-saml/secure-deployment=ROOT.war/:add
 
-/subsystem=keycloak-saml/secure-deployment=ROOT.war/SP="http://0.0.0.0:8080"/:add(sslPolicy=EXTERNAL,logoutPage="/logout")
+/subsystem=keycloak-saml/secure-deployment=ROOT.war/SP="wildfly-keycloak-saml-adapter"/:add(sslPolicy=EXTERNAL,logoutPage="/logout"
 
-/subsystem=keycloak-saml/secure-deployment=ROOT.war/SP="http://0.0.0.0:8080"/IDP=idp/:add( \
+/subsystem=keycloak-saml/secure-deployment=ROOT.war/SP="wildfly-keycloak-saml-adapter"/IDP=idp/:add( \
     SingleSignOnService={ \
         signRequest=false, \
         validateResponseSignature=false, \
@@ -19,5 +19,6 @@
         postBindingUrl=http://localhost:8180/realms/example_realm/protocol/saml, \
         redirectBindingUrl=http://localhost:8180/realms/example_realm/protocol/saml} \
 )
+
 /subsystem=logging/logger=org.wildfly.security:add(level=DEBUG)
 /subsystem=logging/logger=org.keycloak.saml:add(level=DEBUG)
