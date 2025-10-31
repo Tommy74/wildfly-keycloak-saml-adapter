@@ -1,0 +1,1 @@
+# wildfly-keycloak-saml-adapter
