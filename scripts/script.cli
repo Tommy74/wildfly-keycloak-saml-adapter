@@ -1,0 +1,2 @@
+# https://access.redhat.com/solutions/3078171 : needed to start the server locally
+/subsystem=jgroups/stack=tcp/protocol=PING:add(add-index=1)
