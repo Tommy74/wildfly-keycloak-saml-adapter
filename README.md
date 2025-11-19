@@ -30,3 +30,5 @@ Configure client:
 * Keys -> Client signature required:  OFF
 
 N.B.: Set `SP="wildfly-keycloak-saml-adapter"` in `/subsystem=keycloak-saml/secure-deployment=ROOT.war/SP="wildfly-keycloak-saml-adapter"` otherwise you'll get "client_not_found" "Cannot_match_source_hash" error from Keycloak
+
+Note: find more info in https://github.com/wildfly/wildfly-cekit-modules/blob/main/jboss/container/wildfly/launch/keycloak/2.0/added/keycloak.sh
